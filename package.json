@@ -1,0 +1,22 @@
+{
+  "name": "voice-to-video-agent",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Turns a voice file + script into a whiteboard-style explainer video (boxes, arrows, terminal mockups) matching the audio's exact length.",
+  "scripts": {
+    "preview": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts MainVideo out/video.mp4"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.520",
+    "@remotion/gif": "4.0.520",
+    "@remotion/google-fonts": "4.0.520",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "remotion": "4.0.520"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.3",
+    "typescript": "5.5.4"
+  }
+}

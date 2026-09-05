@@ -1,0 +1,219 @@
+{
+  "audioSrc": "voice.mp3",
+  "scenes": [
+    {
+      "type": "title",
+      "durationInFrames": 60,
+      "props": {"text": "AI Coding Agents", "subtitle": "How they actually work"}
+    },
+    {
+      "type": "compare",
+      "durationInFrames": 100,
+      "props": {
+        "title": "Which model?",
+        "items": [
+          {"label": "Model A", "color": "#ff6ec7", "initial": "A"},
+          {"label": "Model B", "color": "#b06bff", "initial": "B"}
+        ]
+      }
+    },
+    {
+      "type": "flow",
+      "durationInFrames": 220,
+      "props": {
+        "title": "Coding agent loop",
+        "layout": "tree",
+        "rootPosition": "top",
+        "nodes": [
+          {"id": "agent", "label": "Agent", "sublabel": "runs tools", "color": "#ffb347", "kind": "box", "icon": "gear"},
+          {"id": "you", "label": "You", "color": "#9aa0ac", "kind": "icon", "icon": "person"},
+          {"id": "model", "label": "Model", "color": "#2de2e6", "kind": "icon", "icon": "brain"},
+          {"id": "term", "label": "", "color": "#ff3b5c", "kind": "terminal", "error": true, "lines": ["$ npm test", "x 1 test failing"]}
+        ],
+        "edges": [
+          {"from": "you", "to": "agent", "color": "#9aa0ac"},
+          {"from": "agent", "to": "model", "bidirectional": true, "color": "#ffb347", "animated": true, "travelIcon": "lightning"},
+          {"from": "agent", "to": "term", "color": "#ff3b5c"}
+        ]
+      }
+    },
+    {
+      "type": "flow",
+      "durationInFrames": 100,
+      "props": {
+        "title": "Built on",
+        "layout": "pair",
+        "nodes": [
+          {"id": "c", "label": "Claude", "color": "#ff9d5c", "kind": "badge"},
+          {"id": "o", "label": "OpenAI", "color": "#39ff88", "kind": "badge"}
+        ],
+        "edges": []
+      }
+    },
+    {
+      "type": "flow",
+      "durationInFrames": 180,
+      "props": {
+        "title": "What it can do",
+        "layout": "pipeline",
+        "nodes": [
+          {
+            "id": "body",
+            "label": "Agent",
+            "color": "#2de2e6",
+            "kind": "icon",
+            "icon": "agent-body",
+            "callouts": [
+              {"label": "Hands: tools", "anchor": "handRight", "color": "#ffb347"},
+              {"label": "Head: thinking", "anchor": "head", "color": "#2de2e6"},
+              {"label": "Legs: actions", "anchor": "legLeft", "color": "#39ff88"}
+            ]
+          }
+        ],
+        "edges": []
+      }
+    },
+    {
+      "type": "flow",
+      "durationInFrames": 150,
+      "props": {
+        "title": "Tools available",
+        "layout": "pipeline",
+        "nodes": [
+          {
+            "id": "tools",
+            "label": "Tools you can use",
+            "color": "#39ff88",
+            "kind": "checklist",
+            "items": ["read_file", "run_cmd", "edit_file"],
+            "activeIndex": 1
+          }
+        ],
+        "edges": []
+      }
+    },
+    {
+      "type": "flow",
+      "durationInFrames": 150,
+      "props": {
+        "title": "Works for any topic",
+        "layout": "grid",
+        "nodes": [
+          {"id": "h", "label": "Home", "color": "#39ff88", "kind": "box", "icon": "house"},
+          {"id": "c", "label": "Vehicle", "color": "#4d7cff", "kind": "box", "icon": "car"},
+          {"id": "m", "label": "Finance", "color": "#ffb347", "kind": "box", "icon": "money"},
+          {"id": "s", "label": "Security", "color": "#ff3b5c", "kind": "box", "icon": "shield"}
+        ],
+        "edges": []
+      }
+    },
+    {
+      "type": "flow",
+      "durationInFrames": 180,
+      "props": {
+        "title": "What the model does",
+        "layout": "pipeline",
+        "nodes": [
+          {"id": "q", "label": "What's an AI agent?", "color": "#2de2e6", "kind": "chatbox"},
+          {"id": "tok", "label": "6 tokens", "color": "#4d7cff", "kind": "chips", "chips": ["What", "'s", "an", "AI", "agent", "?"]},
+          {"id": "mx", "label": "Weights", "color": "#b06bff", "kind": "matrix", "rows": ["[ 0.02 -1.88  0.45 ]  x  [ 0.83 ] = [ 1.42 ]", "[-0.33  0.92 -0.04 ]     [-0.12 ]   [-0.37 ]"], "caption": "× 96 layers"}
+        ],
+        "edges": []
+      }
+    },
+    {
+      "type": "flow",
+      "durationInFrames": 120,
+      "props": {
+        "title": "Drawn from primitives",
+        "layout": "pair",
+        "nodes": [
+          {
+            "id": "bike",
+            "label": "Bicycle",
+            "color": "#39ff88",
+            "kind": "icon",
+            "icon": "custom",
+            "shape": [
+              {"type": "circle", "cx": 25, "cy": 70, "r": 18},
+              {"type": "circle", "cx": 75, "cy": 70, "r": 18},
+              {"type": "path", "points": [[25, 70], [45, 40], [65, 40], [75, 70]], "closed": false},
+              {"type": "path", "points": [[45, 40], [35, 20], [55, 20]], "closed": false},
+              {"type": "line", "x1": 55, "y1": 20, "x2": 65, "y2": 40}
+            ]
+          },
+          {"id": "note", "label": "No icon needed", "color": "#4d7cff", "kind": "box", "sublabel": "drawn live"}
+        ],
+        "edges": []
+      }
+    },
+    {
+      "type": "flow",
+      "durationInFrames": 160,
+      "props": {
+        "title": "More polished mockups",
+        "layout": "tree",
+        "rootPosition": "top",
+        "nodes": [
+          {"id": "bot", "label": "Agent", "color": "#4d7cff", "kind": "icon", "icon": "robot"},
+          {"id": "br", "label": "fix_bug()", "color": "#2de2e6", "kind": "browser", "lines": ["const x = 1", "return x"]},
+          {"id": "srv", "label": "Server", "color": "#39ff88", "kind": "checklist", "items": ["search", "database", "network"], "icons": ["search", "database", "network"], "activeIndex": 1}
+        ],
+        "edges": [
+          {"from": "bot", "to": "br", "color": "#4d7cff", "animated": true},
+          {"from": "bot", "to": "srv", "color": "#39ff88"}
+        ]
+      }
+    },
+    {
+      "type": "flow",
+      "durationInFrames": 180,
+      "props": {
+        "title": "Platform layers",
+        "layout": "stack",
+        "nodes": [
+          {"id": "ui", "label": "1. UI Portal", "color": "#4d7cff", "kind": "layer", "logos": []},
+          {"id": "plat", "label": "2. Platform", "color": "#b06bff", "kind": "layer", "logos": []},
+          {"id": "infra", "label": "3. Infrastructure", "color": "#ff6ec7", "kind": "layer", "logos": [
+            {"label": "Terraform", "color": "#b06bff"},
+            {"label": "Kubernetes", "color": "#4d7cff"},
+            {"label": "AWS", "color": "#ffb347"}
+          ]}
+        ],
+        "edges": []
+      }
+    },
+    {
+      "type": "flow",
+      "durationInFrames": 180,
+      "props": {
+        "title": "Request to production",
+        "layout": "stages",
+        "nodes": [
+          {"id": "req", "label": "Request", "color": "#4d7cff", "kind": "box", "stage": 0},
+          {"id": "build", "label": "Build", "color": "#ffb347", "kind": "box", "stage": 1},
+          {"id": "deploy", "label": "Deploy", "color": "#39ff88", "kind": "box", "stage": 2},
+          {"id": "provision", "label": "Provision", "color": "#b06bff", "kind": "box", "stage": 2},
+          {"id": "run", "label": "Run", "color": "#2de2e6", "kind": "box", "stage": 3}
+        ],
+        "edges": [
+          {"from": "req", "to": "build", "color": "#4d7cff"},
+          {"from": "build", "to": "deploy", "color": "#ffb347"},
+          {"from": "build", "to": "provision", "color": "#ffb347"},
+          {"from": "deploy", "to": "run", "color": "#39ff88"},
+          {"from": "provision", "to": "run", "color": "#b06bff"}
+        ]
+      }
+    }
+  ],
+  "words": [
+    {"word": "This", "start": 0.0, "end": 0.3},
+    {"word": "video", "start": 0.3, "end": 0.6},
+    {"word": "shows", "start": 0.6, "end": 0.9},
+    {"word": "how", "start": 0.9, "end": 1.1},
+    {"word": "a", "start": 1.1, "end": 1.2},
+    {"word": "coding", "start": 1.2, "end": 1.6},
+    {"word": "agent", "start": 1.6, "end": 2.0},
+    {"word": "works.", "start": 2.0, "end": 2.4}
+  ]
+}

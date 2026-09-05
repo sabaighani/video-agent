@@ -1,0 +1,22 @@
+node_modules/
+out/
+.venv/
+align.json
+scenes.generated.json
+*.pyc
+
+# Your own audio/script/logo/character-image files — never tracked, matching
+# this project's "only files you provide yourself, never redistributed"
+# principle (some of what lands here, like company logos, isn't yours to
+# publish). Remove any of these lines if you deliberately want that content
+# versioned in this repo.
+public/assets/*
+!public/assets/README.md
+public/*.mp3
+public/*.wav
+public/*.m4a
+public/*.mp4
+public/script.txt
+
+# Claude Code's own local session/tool state — not part of the project.
+.claude/
